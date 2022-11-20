@@ -1,0 +1,21 @@
+@function background($alpha: 1) {
+  @return hsla(43, 24%, 94%, $alpha);
+}
+
+@function primary($weight: 400, $alpha: 1) {
+  @if $weight == 400 {
+    @return hsla(199, 81%, 35%, $alpha);
+  } @else if $weight == 700 {
+    @return hsla(212, 54%, 19%, $alpha);
+  } @else if $weight == 900 {
+    @return hsla(199, 85%, 10%, $alpha);
+  }
+}
+
+@function white($alpha: 1) {
+  @return hsla(0, 0%, 100%, $alpha);
+}
+
+@function black($alpha: 1) {
+  @return hsla(0, 0%, 0%, $alpha);
+}
