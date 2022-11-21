@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-webp": "^4.0.1",
+    "live-server": "^1.2.2",
     "postcss": "^8.4.19",
     "sass": "^1.56.1"
   }

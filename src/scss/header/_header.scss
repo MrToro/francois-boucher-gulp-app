@@ -1,0 +1,8 @@
+@use 'base/colors';
+@use 'base/breakpoints' as media;
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-block: 3.2rem;
+}

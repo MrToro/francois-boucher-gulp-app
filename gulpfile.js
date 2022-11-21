@@ -10,15 +10,18 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
-function css(done) {
-	src('src/scss/app.scss')
+function js() {
+	return src('src/js/**/*.js')
+		.pipe(dest('build/js'));
+}
+
+function css() {
+	return src('src/scss/app.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest('build/css'));
-
-	done();
 }
 
 function images() {
@@ -34,6 +37,7 @@ function convertToWebp() {
 
 	return src('src/img/**/*.{png,jpg}').pipe(webp(options)).pipe(dest('build/img'));
 }
+
 function convertToAvif() {
 	const options = {
 		quality: 50,
@@ -43,13 +47,17 @@ function convertToAvif() {
 }
 
 function dev() {
+	watch('src/js/**/*', js);
 	watch('src/scss/**/*.scss', css);
 	watch('src/img/**/*', images);
+	watch('src/img/**/*', convertToWebp);
+	watch('src/img/**/*', convertToAvif);
 }
 
+exports.js = js;
 exports.css = css;
 exports.dev = dev;
 exports.images = images;
 exports.convertToWebp = convertToWebp;
 exports.convertToAvif = convertToAvif;
-exports.default = series(images, convertToWebp, convertToAvif, css, dev);
+exports.default = series(js, images, convertToWebp, convertToAvif, css, dev);

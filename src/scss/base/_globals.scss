@@ -1,0 +1,25 @@
+@use 'colors';
+@use 'font';
+@use 'breakpoints' as media;
+
+body {
+  background-color: colors.background();
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  margin-block: 0.8rem;
+  @include font.set(1.8rem, 400, colors.primary(700, 1));
+  font-family: 'Raleway', sans-serif;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: colors.primary(400, 1);
+    text-decoration: underline;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}

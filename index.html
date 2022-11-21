@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Franchois Boucher</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Franchois Boucher</title>
 
-  <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-  <h1>Hello World</h1>
-</body>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="build/css/app.css" />
+	</head>
+	<body>
+		<header class="container header">
+			<a class="headaer__home-button" href="index.html">
+				<picture>
+					<source srcset="build/img/header_logo.avif" type="image/avif" />
+					<source srcset="build/img/header_logo.webp" type="image/webp" />
+					<img src="build/img/header_logo.png" alt="Image logo" loading="lazy" decoding="async" draggable="false" />
+				</picture>
+			</a>
+			<div class="nav">
+				<nav class="nav__list">
+					<a href="#">Artists</a>
+					<a href="#">Auctions</a>
+					<a href="#">Exhibitions</a>
+					<a href="#">Analysis</a>
+					<a href="#">Services</a>
+					<img src="build/img/line.svg" alt="Line" draggable="false" loading="lazy" decoding="async">
+					<a href="#" class="font-weight-700">Join Now</a>
+				</nav>
+
+				<input type="button" class="nav__toggle-button" />
+			</div>
+		</header>
+	</body>
+	<script src="build/js/app.js"></script>
 </html>
