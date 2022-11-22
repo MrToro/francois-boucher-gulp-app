@@ -13,8 +13,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: colors.background(0.8);
     opacity: 0;
     transition: all 300ms ease;
@@ -22,10 +22,16 @@
     @include media.tablet-lg {
       visibility: visible;
       flex-direction: row;
-      gap: 4rem;
+      gap: 2rem;
+      width: fit-content;
+      height: fit-content;
       position: relative;
       background-color: transparent;
       opacity: 1;
+    }
+
+    @include media.desktop {
+      gap: 4rem;
     }
     
     &.active {

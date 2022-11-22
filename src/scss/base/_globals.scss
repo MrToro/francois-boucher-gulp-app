@@ -5,6 +5,31 @@
 body {
   background-color: colors.background();
   font-family: 'Raleway', sans-serif;
+  @include font.set(1.8rem, 400, colors.primary(900, 1));
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  font-family: 'Gideon Roman', cursive;
+}
+
+h1 {
+  @include font.set(9.6rem, 400, colors.primary(400, 1));
+}
+
+h2 {
+  @include font.set(7.2rem, 400, colors.primary(400, 1));
+}
+
+h3 {
+  @include font.set(3.6rem, 400, colors.primary(400, 1));
+}
+
+h4 {
+  @include font.set(2.4rem, 400, colors.primary(400, 1));
+  margin-bottom: 1.6rem;
 }
 
 a {
@@ -22,4 +47,8 @@ a {
 .container {
   width: 90%;
   margin: 0 auto;
+
+  @include media.tablet-lg {
+    width: min(80%, 140rem);
+  }
 }
