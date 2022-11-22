@@ -4,6 +4,9 @@
 
 body {
   background-color: colors.background();
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  background-position: center;
   font-family: 'Raleway', sans-serif;
   @include font.set(1.8rem, 400, colors.primary(900, 1));
 }

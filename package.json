@@ -1,34 +1,38 @@
 {
-  "name": "francois-boucher",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "live-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MrToro/francois-boucher-gulp-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MrToro/francois-boucher-gulp-app/issues"
-  },
-  "homepage": "https://github.com/MrToro/francois-boucher-gulp-app#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.14",
-    "gulp": "^4.0.2",
-    "gulp-avif": "^1.1.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-webp": "^4.0.1",
-    "live-server": "^1.2.2",
-    "postcss": "^8.4.19",
-    "sass": "^1.56.1"
-  }
+	"name": "francois-boucher",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "live-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrToro/francois-boucher-gulp-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MrToro/francois-boucher-gulp-app/issues"
+	},
+	"homepage": "https://github.com/MrToro/francois-boucher-gulp-app#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"cssnano": "^5.1.14",
+		"gulp": "^4.0.2",
+		"gulp-avif": "^1.1.1",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sass": "^5.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-webp": "^4.0.1",
+		"live-server": "^1.2.2",
+		"postcss": "^8.4.19",
+		"sass": "^1.56.1"
+	},
+	"browserslist": [
+		"last 1 version",
+		"> 1%"
+	]
 }
