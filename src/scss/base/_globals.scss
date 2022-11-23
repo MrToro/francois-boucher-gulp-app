@@ -19,7 +19,11 @@ h4 {
 }
 
 h1 {
-  @include font.set(9.6rem, 400, colors.primary(400, 1));
+  @include font.set(6rem, 400, colors.primary(400, 1));
+
+  @include media.desktop {
+    font-size: 9.6rem;
+  }
 }
 
 h2 {
@@ -31,8 +35,13 @@ h3 {
 }
 
 h4 {
-  @include font.set(2.4rem, 400, colors.primary(400, 1));
   margin-bottom: 1.6rem;
+  @include font.set(2.4rem, 400, colors.primary(400, 1));
+}
+
+p {
+  margin-block: 2rem;
+  @include font.set(1.8rem, 400, colors.primary(700, 1));
 }
 
 a {
@@ -53,5 +62,30 @@ a {
 
   @include media.tablet-lg {
     width: min(80%, 140rem);
+  }
+}
+
+.btn {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 2.4rem;
+  padding: 2rem 7rem;
+  transition: all 300ms ease;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include media.mobile {
+    width: fit-content;
+  }
+  
+  &--primary {
+    background-color: colors.primary(400, 1);
+    color: colors.white();
+
+    &:hover {
+      background-color: colors.primary(700, 1);
+    }
   }
 }
