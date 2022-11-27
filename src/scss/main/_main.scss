@@ -7,15 +7,22 @@
 		display: grid;
 
 		@include media.mobile-lg {
-			grid-template-columns: 1fr 1fr;
-			gap: 3rem;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 7.5rem;
+		}
+
+		@include media.desktop {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
 	&__info {
 		display: flex;
 		flex-direction: column;
-		margin-top: 10rem;
+
+		@include media.mobile-lg {
+			margin-top: 10rem;
+		}
 
 		h1 {
 			@include media.mobile {
@@ -52,52 +59,108 @@
 
 	&__hero {
 		position: relative;
+		margin-top: 24px;
+
+		@include media.mobile-lg {
+			margin-top: 0;
+			height: 60vh;
+			min-height: 100%;
+		}
 
 		&::before {
 			content: '';
 			position: absolute;
-			top: 0;
+			top: -24px;
 			left: calc(50% - 24px);
 			width: 48px;
 			height: 48px;
 			border-radius: 50%;
 			border: 1px solid colors.primary(400);
+			
+			@include media.tablet {
+				top: 50%;
+				left: calc(-35px - 24px);
+			}
 		}
 	}
 
 	&__image-container {
-		margin-top: 24px;
+		height: 45vw;
 		border-radius: 50vw;
-		border: 1px solid colors.primary(400);
 		overflow: hidden;
+
+		@include media.mobile-lg {
+			height: 100%;
+		}
 
 		picture {
 		}
 
 		img {
 			width: 100%;
-			height: 45vw;
-
-			@include media.mobile-lg {
-				height: min(100vh, 100vw);
-			}
+			height: 100%;
 		}
 	}
 
 	&__hero-border {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 1px solid colors.primary(400);
+		border-radius: 50vw;
+
+		@include media.tablet {
+			top: 20px;
+			left: -35px;
+		}
 	}
 
 	&__socials-container {
 		display: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: calc(200px - 24px);
+			left: calc(50% - 24px);
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			border: 1px solid colors.primary(400);
+		}
+
+		@include media.desktop {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+    	justify-content: center;
+		}
 	}
 
 	&__socials {
+		display: flex;
+		flex-direction: column;
+
 		a {
 		}
 	}
 
 	&__side-image {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 200px;
+		border: 1px solid colors.primary(400);
+		border-radius: 50vw;
+		overflow: hidden;
+
 		img {
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
