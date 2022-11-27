@@ -82,6 +82,14 @@
 				left: calc(-35px - 24px);
 			}
 		}
+
+		&::after {
+			content: url(../img/main_star.svg);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
 	}
 
 	&__image-container {
@@ -140,11 +148,20 @@
 		}
 	}
 
+	&__date {
+		position: absolute;
+		top: 0;
+		@include font.set(7.2rem, 400, colors.primary(400, 0.1));
+		@include font.get-heading();
+	}
+
 	&__socials {
 		display: flex;
 		flex-direction: column;
 
 		a {
+			@include font.set(2.4rem, 400, colors.primary(400));
+			@include font.get-heading();
 		}
 	}
 
