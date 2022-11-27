@@ -4,10 +4,23 @@
 
 .main {
 	&__hero-container {
+		display: grid;
+
+		@include media.mobile-lg {
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+		}
 	}
 
 	&__info {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10rem;
+
 		h1 {
+			@include media.mobile {
+				font-size: 7rem;
+			}
 		}
 
 		p {
@@ -20,6 +33,10 @@
 	&__statistics {
 		display: flex;
 		gap: 3rem;
+
+		@include media.mobile-lg {
+			margin-top: auto;
+		}
 	}
 
 	&__statictic {
@@ -39,7 +56,7 @@
 		&::before {
 			content: '';
 			position: absolute;
-			top: -24px;
+			top: 0;
 			left: calc(50% - 24px);
 			width: 48px;
 			height: 48px;
@@ -60,6 +77,10 @@
 		img {
 			width: 100%;
 			height: 45vw;
+
+			@include media.mobile-lg {
+				height: min(100vh, 100vw);
+			}
 		}
 	}
 
