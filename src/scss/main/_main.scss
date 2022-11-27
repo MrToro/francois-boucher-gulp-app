@@ -3,67 +3,80 @@
 @use 'base/breakpoints' as media;
 
 .main {
-  display: grid;
-  margin-block: 4rem;
+	&__hero-container {
+	}
 
-  &__hero {
-    position: relative;
-    height: 20rem;
-    
-    div:first-child {
-      width: 100%;
-      height: 100%;
-      border-radius: 200px;
-      border: 2px solid colors.primary(400, 1);
-      overflow: hidden;
-    }
-    
-    &:before {
-      content: '';
-      position: absolute;
-      top: -24px;
-      left: calc(50% - 24px);
-      width: 48px;
-      height: 48px;
-      border: 2px solid colors.primary(400, 1);
-      border-radius: 50%;
-    }
+	&__info {
+		h1 {
+		}
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+		p {
+		}
 
-    &-container {
-      display: grid;
-      gap: 3rem;
-    }
-  }
+		button {
+		}
+	}
 
-  &__statistics {
-    display: flex;
-    gap: 4rem;
+	&__statistics {
+		display: flex;
+		gap: 3rem;
+	}
 
-    p:first-child {
-      font-family: 'Gideon Roman', cursive;
-      @include font.set(3.6rem, 400, colors.primary(400, 1));
+	&__statictic {
+		&-heading {
+			@include font.set(3.6rem, 400, colors.primary(400));
+			@include font.get-heading();
+		}
 
-      @include media.tablet {
-        font-size: 5.6rem;
-      }
-    }
+		&-description {
+			@include font.set(2.4rem, 400, colors.primary(900));
+		}
+	}
 
-    p:last-child {
-      @include font.set(2.4rem, 400, colors.primary(700, 1));
+	&__hero {
+		position: relative;
 
-      @include media.tablet {
-        font-size: 3.2rem;
-      }
-    }
-  }
+		&::before {
+			content: '';
+			position: absolute;
+			top: -24px;
+			left: calc(50% - 24px);
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			border: 1px solid colors.primary(400);
+		}
+	}
 
-  &__socials-container {
-    display: none;
-  }
+	&__image-container {
+		margin-top: 24px;
+		border-radius: 50vw;
+		border: 1px solid colors.primary(400);
+		overflow: hidden;
+
+		picture {
+		}
+
+		img {
+			width: 100%;
+			height: 45vw;
+		}
+	}
+
+	&__hero-border {
+	}
+
+	&__socials-container {
+		display: none;
+	}
+
+	&__socials {
+		a {
+		}
+	}
+
+	&__side-image {
+		img {
+		}
+	}
 }

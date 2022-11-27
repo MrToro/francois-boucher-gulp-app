@@ -5,3 +5,11 @@
   font-weight: $font-weight;
   color: $color;
 }
+
+@mixin get-heading() {
+  font-family: 'Gideon Roman', cursive;
+}
+
+@mixin get-regular() {
+  font-family: 'Raleway', sans-serif;
+}

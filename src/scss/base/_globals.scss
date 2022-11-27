@@ -7,15 +7,16 @@ body {
   background-image: url(../img/bg.png);
   background-size: cover;
   background-position: center;
-  font-family: 'Raleway', sans-serif;
+  
   @include font.set(1.8rem, 400, colors.primary(900, 1));
+  @include font.get-regular();
 }
 
 h1, 
 h2, 
 h3, 
 h4 {
-  font-family: 'Gideon Roman', cursive;
+  @include font.get-heading();
 }
 
 h1 {
@@ -47,7 +48,7 @@ p {
 a {
   margin-block: 0.8rem;
   @include font.set(1.8rem, 400, colors.primary(700, 1));
-  font-family: 'Raleway', sans-serif;
+  @include font.get-regular();
   transition: all 300ms ease;
 
   &:hover {
