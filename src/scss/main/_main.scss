@@ -86,9 +86,17 @@
 		&::after {
 			content: url(../img/main_star.svg);
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: calc(50% - 500px);
+			left: calc(0px - 500px - 25px);
+			width: 1000px;
+			height: 1000px;
 			z-index: -1;
+
+			@include media.desktop {
+				top: calc(50% - 500px);
+				left: auto;
+				right: calc(0px - 500px + 70px);
+			}
 		}
 	}
 
