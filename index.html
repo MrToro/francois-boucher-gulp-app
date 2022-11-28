@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="build/css/app.css" />
 	</head>
 	<body>
+		<!-- header -->
 		<header class="container header">
 			<a class="headaer__home-button" href="index.html">
 				<picture>
@@ -35,6 +36,7 @@
 			</div>
 		</header>
 
+		<!-- main section -->
 		<main class="container main">
 			<div class="main__hero-container">
 				<div class="main__info">
@@ -87,6 +89,7 @@
 			</div>
 		</main>
 
+		<!-- join section -->
 		<section class="container join">
 			<h2 class="join__title">Join Mutual Art</h2>
 
@@ -123,6 +126,80 @@
 			</div>
 		</section>
 
+		<!-- gallery section -->
+		<section class="container gallery">
+			<div class="gallery__info-container">
+				<h2>Absolutely Art Place</h2>
+				<p>
+					His rise to prominence was greatly due to his work as an illustrator for the then-booming pictorial press — an outlet that brought Homer’s imagery into hundreds of
+					thousands of homes on a nearly weekly basis.
+				</p>
+			</div>
+
+			<div class="gallery__slider-container slider">
+				<div class="slider__page">
+					<p class="slider__page-label">1 / 5</p>
+					
+					<div class="slider__page-status-bar">
+						<div class="slider__page-status-bar--active"></div>
+					</div>
+				</div>
+
+				<div class="slider__images">
+					<figure class="slider__image-container active">
+						<picture>
+							<source srcset="build/img/gallery_1.avif" type="image/avif" />
+							<source srcset="build/img/gallery_1.webp" type="image/webp" />
+							<img src="build/img/gallery_1.png" alt="..." loading="lazy" decoding="async" draggable="false" />
+						</picture>
+
+						<figcaption>Diana Resting after her Bath</figcaption>
+					</figure>
+
+					<figure class="slider__image-container">
+						<picture>
+							<source srcset="build/img/gallery_2.avif" type="image/avif" />
+							<source srcset="build/img/gallery_2.webp" type="image/webp" />
+							<img src="build/img/gallery_2.png" alt="..." loading="lazy" decoding="async" draggable="false" />
+						</picture>
+
+						<figcaption>Diana Resting after her Bath</figcaption>
+					</figure>
+
+					<figure class="slider__image-container">
+						<picture>
+							<source srcset="build/img/gallery_3.avif" type="image/avif" />
+							<source srcset="build/img/gallery_3.webp" type="image/webp" />
+							<img src="build/img/gallery_3.png" alt="..." loading="lazy" decoding="async" draggable="false" />
+						</picture>
+
+						<figcaption>Diana Resting after her Bath</figcaption>
+					</figure>
+
+					<figure class="slider__image-container">
+						<picture>
+							<source srcset="build/img/gallery_4.avif" type="image/avif" />
+							<source srcset="build/img/gallery_4.webp" type="image/webp" />
+							<img src="build/img/gallery_4.png" alt="..." loading="lazy" decoding="async" draggable="false" />
+						</picture>
+
+						<figcaption>Diana Resting after her Bath</figcaption>
+					</figure>
+
+					<figure class="slider__image-container">
+						<picture>
+							<source srcset="build/img/gallery_5.avif" type="image/avif" />
+							<source srcset="build/img/gallery_5.webp" type="image/webp" />
+							<img src="build/img/gallery_5.jpg" alt="..." loading="lazy" decoding="async" draggable="false" />
+						</picture>
+
+						<figcaption>Diana Resting after her Bath</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer section -->
 		<footer class="container footer">
 			<div class="footer__nav-container">
 				<h4>Information</h4>
@@ -178,5 +255,7 @@
 			</div>
 		</footer>
 	</body>
+
 	<script src="build/js/app.js"></script>
+	<script src="build/js/slider.js"></script>
 </html>

@@ -1,0 +1,73 @@
+@use 'base/colors';
+@use 'base/font';
+@use 'base/breakpoints' as media;
+
+.slider {
+  &__page {
+    p {
+      @include font.set(2rem, 400, colors.primary(400));
+      @include font.get-heading;
+      margin-block: 0;
+    }
+  }
+
+  &__page-status-bar {
+    position: relative;
+    width: min(80%, 600px);
+    height: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+    background-color: colors.primary(400, 0.2);
+  }
+
+  &__page-status-bar--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: colors.primary(400);
+    transition: all 300ms ease;
+  }
+
+  &__images {
+    position: relative;
+    min-height: 45vh;
+
+    @include media.desktop {
+      min-height: 90vh;
+    }
+  }
+
+  &__image-container {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    transition: all 2s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 45vh;
+      border-radius: 1.6rem;
+      border: 1px solid colors.primary(400);
+
+      @include media.desktop {
+        height: 90vh;
+      }
+    }
+
+    figcaption {
+      @include font.set(1.3rem, 400, colors.primary(900));
+      margin-block: 1rem;
+      text-align: right;
+    }
+  }
+}
