@@ -28,12 +28,10 @@
 			@include media.mobile {
 				font-size: 7rem;
 			}
-		}
 
-		p {
-		}
-
-		button {
+			@include media.desktop {
+				font-size: 9.2rem;
+			}
 		}
 	}
 
@@ -92,6 +90,16 @@
 			height: 1000px;
 			z-index: -1;
 
+			animation: rotate 60s linear infinite;
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
 			@include media.desktop {
 				top: calc(50% - 500px);
 				left: auto;
@@ -107,9 +115,6 @@
 
 		@include media.mobile-lg {
 			height: 100%;
-		}
-
-		picture {
 		}
 
 		img {
